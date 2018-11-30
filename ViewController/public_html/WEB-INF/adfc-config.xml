@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="welcome">
+    <page>/welcome/welcome.jsf</page>
+  </view>
+  <view id="pagewithfragment">
+    <page>/pagewithfragment/pagewithfragment.jsf</page>
+  </view>
+  <view id="pagewithredirect">
+    <page>/pagewithredirect/pagewithredirect.jsf</page>
+  </view>
+  <view id="myaccount">
+    <page>/myaccount/myaccount.jsf</page>
+  </view>
+  <control-flow-rule id="__1">
+    <from-activity-id>*</from-activity-id>
+    <control-flow-case id="__2">
+      <from-outcome>welcome</from-outcome>
+      <to-activity-id>welcome</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__3">
+      <from-outcome>pagewithfragment</from-outcome>
+      <to-activity-id>pagewithfragment</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__4">
+      <from-outcome>pagewithredirect</from-outcome>
+      <to-activity-id>pagewithredirect</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__5">
+      <from-outcome>myaccount</from-outcome>
+      <to-activity-id>myaccount</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-config>

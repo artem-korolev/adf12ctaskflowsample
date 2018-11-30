@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="pagewithfragment-flow">
+    <default-activity>isAuthenticated</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <router id="isAuthenticated">
+      <default-outcome>no</default-outcome>
+    </router>
+    <view id="Fragment">
+      <page>/pagewithfragment/fragments/Fragment.jsff</page>
+    </view>
+    <parent-action id="gotoWelcomePage">
+      <parent-outcome>welcome</parent-outcome>
+    </parent-action>
+    <parent-action id="gotoMyaccountPage">
+      <parent-outcome>myaccount</parent-outcome>
+    </parent-action>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome>
+        <name>taskFlowReturn1</name>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="taskFlowReturn2">
+      <outcome>
+        <name>taskFlowReturn2</name>
+      </outcome>
+    </task-flow-return>
+    <control-flow-rule id="__1">
+      <from-activity-id>isAuthenticated</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>no</from-outcome>
+        <to-activity-id>Fragment</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>Fragment</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>gotoMyaccount</from-outcome>
+        <to-activity-id>gotoMyaccountPage</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>gotoWelcome</from-outcome>
+        <to-activity-id>gotoWelcomePage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>gotoWelcomePage</from-activity-id>
+      <control-flow-case id="__7">
+        <to-activity-id>taskFlowReturn1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__8">
+      <from-activity-id>gotoMyaccountPage</from-activity-id>
+      <control-flow-case id="__9">
+        <to-activity-id>taskFlowReturn2</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

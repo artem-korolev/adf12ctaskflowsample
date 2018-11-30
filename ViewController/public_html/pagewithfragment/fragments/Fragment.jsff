@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:navigationPane hint="list" id="np1">
+    <af:commandNavigationItem id="ni1" text="Goto Myaccount" action="gotoMyaccount" partialSubmit="true"/>
+    <af:commandNavigationItem id="ni2" text="Goto Welcome" action="gotoWelcome" partialSubmit="true"/>
+  </af:navigationPane>
+</ui:composition>

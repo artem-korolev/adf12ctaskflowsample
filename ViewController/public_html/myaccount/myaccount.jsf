@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="myaccount.jsf" id="d1">
+        <af:form id="f1">
+            <af:outputFormatted value="&lt;h1>Myaccount&lt;/h1>" id="of1"/>
+            <af:navigationPane hint="buttons" id="np1">
+                <af:commandNavigationItem id="ni1" text="gotoWelcome" action="welcome" partialSubmit="true"/>
+            </af:navigationPane>
+        </af:form>
+    </af:document>
+</f:view>
